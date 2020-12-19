@@ -7,9 +7,36 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <header class="navbar">
+     <div class="navbar-start">
+      <div class="hero is-bold">
+        <h1 class="title"><a href="/">どくしょひろば</a></h1>
+        </div> 
+      </div>
+     </div>
+      <div class="navbar-end">
+       <div class="navbar-item">
+        <% if user_signed_in? %>
+          <div class="user_nav">
+            <ul class="user_info">
+              <li>
+                <%= link_to "マイページ", "/users/#{current_user.id}", class: "button is-primary is-medium" %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-primary is-medium" %>
+              </li>
+            </ul>
+          </div>
+        <% else %>
+          <div class="user_info">
+            <%= link_to "ログイン", new_user_session_path, class: "button is-primary is-medium" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "button is-primary is-medium" %>
+          </div>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
