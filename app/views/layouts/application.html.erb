@@ -11,30 +11,42 @@
   </head>
 
   <body>
-    <header class="navbar">
-     <div class="navbar-start">
-      <div class="hero is-bold">
-        <h1 class="title"><a href="/">どくしょひろば</a></h1>
-        </div> 
-      </div>
-     </div>
-      <div class="navbar-end">
-       <div class="navbar-item">
-        <% if user_signed_in? %>
-          <div class="user_nav">
-            <ul class="user_info">
-              <li>
-                <%= link_to "マイページ", "/users/#{current_user.id}", class: "button is-primary is-medium" %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-primary is-medium" %>
-              </li>
-            </ul>
-          </div>
-        <% else %>
-          <div class="user_info">
-            <%= link_to "ログイン", new_user_session_path, class: "button is-primary is-medium" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "button is-primary is-medium" %>
-          </div>
+    <header class="navbar is-success">
+     <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4" style="font-family: cursive;">どくしょひろば</h1>
         <% end %>
+     </div>
+     <% if user_signed_in? %>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "#{current_user.nickname}のページ", "/users/#{current_user.id}", class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "しんきとうろく", new_user_registration_path, class: "button is-warning is-light" %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+       </div>
       </div>
     </header>
     <%= yield %>

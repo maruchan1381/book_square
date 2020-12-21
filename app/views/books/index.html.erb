@@ -1,2 +1,20 @@
-
-
+<section class="section">
+  <div class="container">
+    <div class="columns is_multiline">
+      <%= @books.each do |book| %>
+        <div class="colum is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <%= image_tag book.image%>
+              </figure>
+            </div>
+            <div class="card-title">
+              <span><%= book.title %><br><%= book.author %></span>%>
+            </div>
+          </div>
+       </div>
+      <% end %>
+    </div>
+  </div>
+</section>
