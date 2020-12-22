@@ -25,6 +25,8 @@
                   <%= link_to "#{current_user.nickname}のページ", "/users/#{current_user.id}", class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
+                  <%= link_to "ほんのけんさく", search_books_path, class: "button is-warning is-light" %>
+                <p class="control">
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
                 </p>
               </div>
