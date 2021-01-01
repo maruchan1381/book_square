@@ -4,6 +4,7 @@
       <%= link_to (image_tag(book.medium_image_url)), book.item_url %>
       <%= book.title %>
       <%= book.author %>
-    </div>
+      <%= link_to "とうろく", books_path, class: "button is--warning is-light" %>
+      </div>
   <% end %>
 <% end %>

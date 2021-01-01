@@ -12,3 +12,8 @@ ul,li {
   padding: 0;
   margin: 0;
 }
+
+.search_form{
+  text-align: center;
+  font-size: 22px;
+}

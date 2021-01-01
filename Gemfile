@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bulma-rails'
 gem 'rakuten_web_service'
+gem 'pry-rails'
