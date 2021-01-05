@@ -1,0 +1,22 @@
+<div class="container">
+ <div class="search_form">
+  <h1>ほんのけんさく<h1>
+  <div class="content">
+  <div id="sarch-box">
+    <%= form_with url: search_books_path, method: :get, local: true do |f| %>
+      <%= f.text_field :keyword, placeholder: "ほんのタイトル" %>
+      <%= f.submit "けんさくする" %>
+    <% end %>
+  </div>
+ </div>
+</div>
+
+<div class="results">
+  <b>けんさくけっか</b>
+   <div class="content">
+    <div id="book_list">
+    <%= render partial: 'book_list' %>
+    </div>
+   </div>
+  </div>
+</div>

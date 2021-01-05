@@ -1,0 +1,11 @@
+<% if @books.present? %>
+  <% @books.each do |book| %>
+    <div class="list">
+      <%= link_to (image_tag(book.medium_image_url)), book.item_url %>
+      <p><%= book.title %></p>
+      <p><%= book.author %></p>
+      <%= link_to "よんだよ！！", books_path, class: "button is--warning is-light" %>
+      <hr>
+      </div>
+  <% end %>
+<% end %>
