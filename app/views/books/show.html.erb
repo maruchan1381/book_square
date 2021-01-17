@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="contents">
+      <p><%= image_tag(@book.image_url) %></p>
+      <p><%= @book.title %></p>
+      <p><%= @book.author %></p>
+  </div>
+  <div class="contents">
+    <% if user_signed_in? && current_user.id == @book.user_id %>
+      <%= form_with(model: [@book, @review], local: true) do |f| %>
+        <p><%= f.text_area :description, placeholder: "かんそうをかく" %></p>
+        <P><%= f.date_field :date %></p>
+        <p><%= f.submit "きろくする" %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
