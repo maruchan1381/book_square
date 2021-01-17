@@ -1,11 +1,17 @@
 <% if @books.present? %>
   <% @books.each do |book| %>
     <div class="list">
-      <%= link_to (image_tag(book.medium_image_url)), book.item_url %>
+      <%= image_tag(book.medium_image_url) %>
       <p><%= book.title %></p>
       <p><%= book.author %></p>
-      <%= link_to "よんだよ！！", books_path, class: "button is--warning is-light" %>
+
+      <%= form_with model: @book, url: books_path, local: true  do %>
+      <p><%= hidden_field_tag :title, book.title %></p>
+      <p><%= hidden_field_tag :image_url, book.medium_image_url %></p>
+      <p><%= hidden_field_tag :author, book.author %></p>
+      <%= submit_tag "登録" %>
+      <% end %>
       <hr>
-      </div>
+    </div>
   <% end %>
 <% end %>
