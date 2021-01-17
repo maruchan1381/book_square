@@ -8,4 +8,18 @@ class BooksController < ApplicationController
       @books = RakutenWebService::Books::Book.search(title: params[:keyword])
     end
   end
+
+  def new
+  end
+
+  def create
+    @book = Book.new(book_params)
+    @book.save
+    redirect_to root_path
+  end
+  
+  private
+  def book_params
+    params.permit(:title, :author, :image_url).merge(user_id: current_user.id)
+  end
 end
