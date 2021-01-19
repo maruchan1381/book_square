@@ -1,0 +1,15 @@
+<div class="container">
+  <p><%= @nickname %>の本だな</p>
+  <% @books.each do |book| %>
+    <div class="content_post">
+      <p><%= image_tag book.image_url %></p>
+      <p><%= book.title %></p>
+      <p><%= book.author %></p>
+      <br>
+        <P>かんそう</p>
+        <span><%= book.review.description %></span>
+        <p>いつよんだ</p>
+        <p><%= book.review.date %></p>
+    </div>
+  <% end %>
+</div>
