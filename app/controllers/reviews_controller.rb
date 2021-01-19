@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def create
     review = Review.create(review_params)
-    redirect_to "/books/#{review.book.id}"
+    redirect_to root_path
   end
 
   private
