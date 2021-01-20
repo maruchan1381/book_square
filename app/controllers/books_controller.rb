@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.order("created_at DESC")
   end
 
   def search
@@ -19,7 +19,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @review = Review.new
   end
-  
+
   def destroy
     book = Book.find(params[:id])
     book.destroy
