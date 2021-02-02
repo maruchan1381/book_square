@@ -21,9 +21,15 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
-                <p class="control">
-                  <%= link_to "#{current_user.nickname}の本だな", "/users/#{current_user.id}", class: "button is-warning is-light" %>
-                </p>
+                <% unless current_page?(current_user) %>
+                  <p class="control">
+                    <%= link_to "#{current_user.nickname}の本だな", "/users/#{current_user.id}", class: "button is-warning is-light" %>
+                  </p>
+                <% end %>
+                  <% if current_page?(current_user) %>
+                    <p class="control">
+                      <%= link_to "みんなの本だな", root_path, class: "button is-warning is-light" %>
+                  <% end %>
                 <p class="control">
                   <%= link_to "ほんのけんさく", search_books_path, class: "button is-warning is-light" %>
                 <p class="control">

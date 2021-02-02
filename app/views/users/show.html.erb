@@ -1,16 +1,24 @@
 <div class="container">
-  <p><%= @nickname %>の本だな</p>
+  <h1><%= @nickname %>の本だな</h1>
+  <div class="columns is-multiline">
   <% @books.each do |book| %>
-    <div class="content_post">
-      <p><%= image_tag book.image_url %></p>
-      <p><%= book.title %></p>
-      <p><%= book.author %></p>
-      <br>
-        <P>かんそう</p>
-        <span><%= book.review.description %></span>
-        <p>いつよんだ</p>
-        <p><%= book.review.date %></p>
-        <hr>
+    <div class="column is-3">
+      <div class="card">
+        <div class="card-image">
+          <p><%= image_tag book.image_url %></p>
+        </div>
+        <div class="card-title">
+          <p><%= book.title %></p>
+          <p><%= book.author %></p>
+        </div>
+        <br>
+        <div class="card-review">
+          <p><b>かんそう</b></p>
+          <span><%= book.review.description %></span>
+          <p><b>いつよんだ</b></p>
+          <p><%= book.review.date %></p>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
