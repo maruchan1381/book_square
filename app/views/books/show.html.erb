@@ -1,16 +1,26 @@
-<div class="container">
-  <div class="contents">
+<div class="container has-background-primary-light">
+  <div class="columns is-centered">
+    <div class="column is-6">
       <p><%= image_tag(@book.image_url) %></p>
       <p><%= @book.title %></p>
       <p><%= @book.author %></p>
+    </div>
   </div>
-  <div class="contents">
+  <div class="columns is-centered">
+    <div class="column is-6">
     <% if user_signed_in? && current_user.id == @book.user_id %>
       <%= form_with(model: [@book, @review], local: true) do |f| %>
-        <p><%= f.text_area :description, placeholder: "かんそうをかく" %></p>
-        <P><%= f.date_field :date %></p>
-        <p><%= f.submit "きろくする" %></p>
+        <div class="field">
+          <%= f.label :description, "かんそうをかく", class: "label" %>
+          <%= f.text_area :description, class: "textarea" %>
+        </div>
+        <div class="field">
+          <%= f.label :date, "いつよんだ？", class: "label" %>
+          <%= f.date_field :date, class: "input" %>
+        </div>
+        <%= f.submit "きろくする", class: "button is-info" %>
       <% end %>
     <% end %>
+   </div>
   </div>
 </div>
