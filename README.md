@@ -24,20 +24,20 @@ pepper@gmail.com/pepper321
 ## 利用方法
 
 * トップページから新規登録・ログイン
-![新規投稿画面](https://gyazo.com/7ecab8d0517986ee5f2d5d2860bbd43f)
+![新規投稿画面](https://gyazo.com/7ecab8d0517986ee5f2d5d2860bbd43f/raw)
 
 * 一覧画面の右上ボタンから、本の検索画面へ遷移
-![トップ画面](https://gyazo.com/c30cf3d3f83c4338481e338a226b7ca4)
+![トップ画面](https://gyazo.com/c30cf3d3f83c4338481e338a226b7ca4/raw)
 
 * 本のタイトルを入力して検索を行うと結果が出力(表紙の画像、タイトル、作者)
-![検索画面](https://gyazo.com/4d457ad1d30f004a6b46ff47a4fedbf6)
+![検索画面](https://gyazo.com/4d457ad1d30f004a6b46ff47a4fedbf6/raw)
 
 * よんだよ!ボタンを押すと、日付と感想を入力できる
 * きろくするボタンを押すと、トップページの一覧画面へ遷移
-![感想入力画面](https://gyazo.com/20c0f52f41a0c28fafd44aace0d52112)
+![感想入力画面](https://gyazo.com/20c0f52f41a0c28fafd44aace0d52112/raw)
 
 * 一覧画面の右上ボタンから、マイページ(自分の本棚)へ遷移
-![自分の本棚](https://gyazo.com/d25ef591d02e7ea8a7404e35449a8d98)
+![自分の本棚](https://gyazo.com/d25ef591d02e7ea8a7404e35449a8d98/raw)
 
 
 ## 課題解決
