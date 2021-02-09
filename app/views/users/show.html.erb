@@ -1,5 +1,5 @@
 <div class="container has-background-warning-light">
-  <h1 class="subtitle is-5"><%= @nickname %>の本だな（<%= @books.count %>さつ）</h1>
+  <h1 class="subtitle is-5"><%= @nickname %>の本だな<i class="fa fa-book fa-fw"></i><%= @books.count %>さつ</h1>
   <div class="columns is-multiline">
   <% @books.each do |book| %>
     <div class="column is-3">
@@ -12,7 +12,7 @@
           <p><%= book.author %></p>
         </div>
         <br>
-        <div class="card-review" id="reviews">
+        <div class="card-review">
           <p><b>かんそう</b></p>
           <span><%= book.review.description %></span>
           <p><b>いつよんだ</b></p>
