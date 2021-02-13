@@ -3,7 +3,7 @@ class Review < ApplicationRecord
   belongs_to :user
   
   with_options presence: true do
-    validates :description
+    validates :description, length: { maximum: 30 }
     validates :date
   end
 
