@@ -40,8 +40,8 @@ pepper@gmail.com/pepper321
 ![感想入力画面](https://gyazo.com/20c0f52f41a0c28fafd44aace0d52112/raw)
 
 
-* 一覧画面の右上ボタンから、マイページ(自分の本棚)へ遷移
-![自分の本棚](https://gyazo.com/d25ef591d02e7ea8a7404e35449a8d98/raw)
+* 一覧画面の右上ボタンから、マイページ(自分の本棚)へ遷移(今まで読んだ本の冊数がわかる)
+![自分の本棚](https://gyazo.com/c3005a5c572bb3eec09e791b5731666a/raw)
 
 
 
