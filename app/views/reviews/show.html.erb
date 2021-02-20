@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-6">
+    <div class="title has-text-success">どくしょきろく</div>
+    <p><%= image_tag(@book.image_url) %></p>
+      <p><%= @book.title %></p>
+      <p><%= @book.author %></p>
+    </div>
+  </div>
+    <div class="columns is-centered">
+     <div class="column is-6">
+      <p><b>かんそう</b><i class="fa fa-paw"></i></p>
+      <span><%= @book.review.description %></span>
+      <p><b>いつよんだ</b></p>
+      <p><%= @book.review.date %></p>
+      <%= link_to "#{current_user.nickname}の本だなにもどる", "/users/#{current_user.id}", class: "button is-success is-light" %>
+     </div>
+    </div>
+</div>

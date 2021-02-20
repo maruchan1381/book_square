@@ -10,16 +10,11 @@
         <div class="card-title">
           <p><%= book.title %></p>
           <p><%= book.author %></p>
+          <%= link_to "きろくをみる", book_review_path(book.id), class:"button is-success is-light" %>
         </div>
-        <br>
-        <div class="card-review">
-          <p><b>かんそう</b></p>
-          <span><%= book.review.description %></span>
-          <p><b>いつよんだ</b></p>
-          <p><%= book.review.date %></p>
-        </div>
-        <p><%= link_to 'けす', book_path(book.id), method: :delete %></p>
       </div>
     </div>
   <% end %>
+  </div>
+  </div>
 </div>
