@@ -10,6 +10,9 @@
         <div class="card-title">
           <%= link_to "きろくをみる", book_review_path(book.id), class:"button is-success is-light" %>
         </div>
+        <div class="card-title">
+          <%= link_to "けす", book_path(book.id), method: :delete, class:"button is-warning is-small is-light" %>
+        </div>
       </div>
     </div>
   <% end %>
