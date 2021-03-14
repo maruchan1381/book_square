@@ -13,4 +13,8 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 6 },
                          format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   end
+
+  def already_liked?(book)
+    self.likes.exists?(book_id: book.id)
+  end
 end
