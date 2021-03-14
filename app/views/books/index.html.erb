@@ -10,6 +10,17 @@
             <div class="card-title">
               <span><%= book.title %><br><%= book.author %></span>
             </div>
+            <% if current_user.already_liked?(book) %>
+             <%= link_to book_likes_path(book), method: :delete do %>
+              <i class="fa fa-heart"></i>
+             <% end %>
+             <%= book.likes.count %>
+            <% else %>
+              <%= link_to book_likes_path(book), method: :post do %>
+               <i class="fa fa-heart-o"></i>
+             <% end %>
+             <%= book.likes.count %>
+            <% end %>
           </div>
        </div>
       <% end %>
