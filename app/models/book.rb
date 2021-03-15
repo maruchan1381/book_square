@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :user
   has_one :review, dependent: :destroy
-  has_many :likes
+  has_many :likes, dependent: :destroy
 
   with_options presence: true do
     validates :title

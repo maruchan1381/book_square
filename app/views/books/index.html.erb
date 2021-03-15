@@ -15,7 +15,7 @@
               <i class="fa fa-heart"></i>
              <% end %>
              <%= book.likes.count %>
-            <% else %>
+             <% else %>
               <%= link_to book_likes_path(book), method: :post do %>
                <i class="fa fa-heart-o"></i>
              <% end %>
